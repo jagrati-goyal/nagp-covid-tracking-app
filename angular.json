@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hello": {
+    "covid-tracking-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/hello",
+            "outputPath": "dist/covid-tracking-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,9 +24,14 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles.css",
+              "node_modules/ngx-toastr/toastr.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -62,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "hello:build"
+            "browserTarget": "covid-tracking-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "hello:build:production"
+              "browserTarget": "covid-tracking-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "hello:build"
+            "browserTarget": "covid-tracking-app:build"
           }
         },
         "test": {
@@ -110,15 +115,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "hello:serve"
+            "devServerTarget": "covid-tracking-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "hello:serve:production"
+              "devServerTarget": "covid-tracking-app:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "hello"
+  "defaultProject": "covid-tracking-app"
 }

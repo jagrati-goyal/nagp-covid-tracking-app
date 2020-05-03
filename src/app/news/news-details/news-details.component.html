@@ -1,0 +1,16 @@
+<br />
+<div id="module" *ngFor="let news of getAllNews()">
+  <div class="card" style="width: 80%">
+     <div class="card-body">
+
+      <h2 class="card-title"> {{ news.title }} </h2>
+
+      <label class="title">Description : </label> {{ news.description }}<br />
+      <label class="title">Summary : </label> {{news.summary}}<br />
+      <label class="title">Full News : </label>
+      {{news.fullNews }}
+    </div>
+
+  </div>
+  <br />
+</div>

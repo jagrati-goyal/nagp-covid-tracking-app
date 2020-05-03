@@ -5,7 +5,8 @@
     "types": [
       "jasmine",
       "node"
-    ]
+    ],
+    "emitDecoratorMetadata": false
   },
   "files": [
     "src/test.ts",

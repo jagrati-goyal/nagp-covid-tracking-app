@@ -1,0 +1,24 @@
+<div class="container">
+    <table class="table table-striped border border-dark" *ngIf="statesData && statesData.length">
+        <thead>
+            <tr>
+                <th>State</th>
+                <th>State Code</th>
+                <th> Total Confirmed</th>
+                <th> Currently active</th>
+                <th> Total Recovered</th>
+                <th>Deceased</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let state of statesData">
+                <td><a [routerLink]="['state', state.state]">{{state.state}}</a></td>
+                <td>{{ state.statecode}}</td>
+                <td>{{ state.confirmed}}</td>
+                <td>{{ state.active}}</td>
+                <td>{{ state.recovered}}</td>
+                <td>{{ state.deaths}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

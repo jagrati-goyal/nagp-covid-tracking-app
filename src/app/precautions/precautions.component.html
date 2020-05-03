@@ -1,0 +1,19 @@
+<br />
+<div class="container">
+    <span class="textData">Protect yourself and others around you by knowing the facts and taking appropriate
+        precautions.
+        Follow advice provided by your local public health agency.</span>
+    <hr />
+    <ul>
+        <div *ngFor="let precaution of precautions">
+            <li>
+                <label>{{ precaution.text }}</label>
+                <br />
+                <img class="image" [src]="precaution.image" [alt]="precaution.text" width="40%" height="40%" />
+                <br /><br />
+            </li>
+        </div>
+    </ul>
+    <span>Avoiding unneeded visits to medical facilities allows healthcare systems to operate more effectively,
+        therefore protecting you and others.</span>
+</div>

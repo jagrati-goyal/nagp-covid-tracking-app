@@ -1,0 +1,17 @@
+<div class="row header">
+    <ul class="nav nav-tabs">
+        <li routerLinkActive='active' [routerLinkActiveOptions]="{exact: true}" role="presentation">
+            <a routerLink="dashboard">Dashboard</a>
+        </li>
+        <li role="presentation" routerLinkActive='active'>
+            <a routerLink="news">News</a>
+        </li>
+        <li role="presentation" routerLinkActive='active'>
+            <a [routerLink]="['precautions']">Precautions</a>
+        </li>
+
+    </ul>
+    <button class="btn btn-primary" routerLink="login" *ngIf="!isUserLoggedIn()">Admin Login</button>
+    <button class="btn btn-primary" routerLink="logout" *ngIf="isUserLoggedIn()">Admin Logout</button>
+    <span class="loginStatus"></span>
+</div>

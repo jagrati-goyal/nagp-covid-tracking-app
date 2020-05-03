@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>{{ stateName }}</h1>
+    <table class="table table-striped border border-dark" *ngIf="keys && keys.length">
+        <thead>
+            <tr>
+                <th>District</th>
+                <th>Active</th>
+                <th> Confirmed</th>
+                <th> Total Recovered</th>
+                <th>Deceased</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let key of keys">
+
+                <td>{{ key }}</td>
+                <td>{{ districtsData[key].active }}</td>
+                <td>{{ districtsData[key].confirmed}}</td>
+                <td>{{ districtsData[key].recovered}}</td>
+                <td>{{ districtsData[key].deceased}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 *ngIf="noData && noData.length > 0">
+        <hr />{{ noData }}</h2>
+</div>
